@@ -1,5 +1,0 @@
-AUTOMAKE_OPTIONS = foreign
-lib_LIBRARIES = libabefhe.a
-libabefhe_a_SOURCES = ABE_FHE.cpp Ctxt.cpp ABE_mkey.cpp abe_core.c timing.cpp matrix_fhe.cpp
-INCLUDES = -I./ -I/usr/local/glib/include/glib-2.0/ -I/usr/local/include -I/usr/include
-LIBS = -L/usr/local/glib/lib -lglib-2.0  -L/usr/local/lib -lntl -lpbc -lgmp -L/usr/lib/i386-linux-gnu -lcrypto
