@@ -1,0 +1,36 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ([2.69])
+AC_INIT([libabefhe.a], [1.0], [youdao5657@163.com])
+AC_CONFIG_SRCDIR([matrix_fhe.cpp])
+AC_CONFIG_HEADERS([config.h])
+AM_INIT_AUTOMAKE(libabefhe.a,1.0)
+
+# Checks for programs.
+AC_PROG_CXX
+AC_PROG_CC
+
+AC_PROG_RANLIB
+# Checks for libraries.
+# FIXME: Replace `main' with a function in `-lgmp':
+AC_CHECK_LIB([gmp], [main])
+# FIXME: Replace `main' with a function in `-lntl':
+AC_CHECK_LIB([ntl], [main])
+# FIXME: Replace `main' with a function in `-lpbc':
+AC_CHECK_LIB([pbc], [main])
+
+# Checks for header files.
+AC_CHECK_HEADERS([stdlib.h string.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_CHECK_HEADER_STDBOOL
+AC_C_INLINE
+AC_TYPE_UINT32_T
+
+# Checks for library functions.
+AC_FUNC_MALLOC
+AC_CHECK_FUNCS([floor sqrt strdup])
+
+AC_CONFIG_FILES([makefile])
+AC_OUTPUT

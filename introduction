@@ -1,0 +1,6 @@
+该版本功能：
+setup程序生成主属性参数（pub_key,master_key,t_key)
+prvGen程序生成属性基密钥（kevin_priv_key）
+abefheEnc程序生成密文（5.abefhe, 8.abefhe）
+abefheDec程序完成对密文的解密
+abefheCom程序完成对密文的计算

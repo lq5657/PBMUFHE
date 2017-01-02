@@ -1,0 +1,20 @@
+AUTOMAKE_OPTIONS = foreign
+bin_PROGRAMS = setup prvGen abefheEnc abefheDec abefheCom
+#bin_PROGRAMS = setup
+setup_SOURCES = setup.cpp common.c serialize.cpp
+#bin_PROGRAMS = prvGen
+prvGen_SOURCES = prvGen.cpp serialize.cpp common.c policy_lang.c 
+#bin_PROGRAMS = abefheEnc
+abefheEnc_SOURCES = enc.cpp serialize.cpp common.c policy_lang.c
+
+abefheDec_SOURCES = dec.cpp serialize.cpp common.c policy_lang.c
+
+abefheCom_SOURCES = compute.cpp serialize.cpp common.c policy_lang.c
+#testSerialize_SOURCES = serialize.cpp
+#bin_PROGRAMS = testabefhe
+#testabefhe_SOURCES = test_abefhe.cpp common.c policy_lang.c
+
+INCLUDES = -I./ -I/usr/include -I/usr/glib/include/glib-2.0 -I/usr/local/include
+LIBS = -L./ABE_FHE -labefhe -L/usr/local/glib/lib -lglib-2.0 -lgthread-2.0 -L/usr/local/lib -lntl -lpbc -lgmp -L/usr/lib/i386-linux-gnu -lcrypto -lpthread
+
+
