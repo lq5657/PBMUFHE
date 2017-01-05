@@ -11,9 +11,9 @@ and shared multi-user capability.
 
 After introduce my paper, Let's talk about how to compile the source code. Before executing the make command, you must ensure that the 
 following static libraries are installed：
-[1] pthread[2]crypto[3]gmp[4]pbc[5]ntl 
-if they are installed above libraries, will installed in /usr/local/lib
-[6]glib-2.0 [7] gthread-2.0 
+pthread,crypto,gmp,pbc,ntl. 
+if they are installed above libraries, will installed in /usr/local/lib.
+and glib-2.0,gthread-2.0 
 
 If you have installed the static libraries above, first you should executing the make command in directory ABE_FHE, it will generate the static
 library abefhe.a; then, you can executing the make command in directory PBMUFHE, that will generate 5 executable file, setup, prvGen, abefheDec,
